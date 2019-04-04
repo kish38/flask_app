@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block main_body %}
+<h2>My Posts</h2>
+
+{% for article in articles %}
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action ">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{article.title}}</h5>
+          <small>{{article.author}}</small>
+        </div>
+        <p class="mb-1">{{article.description}}</p>
+        <small>Donec id elit non mi porta.</small>
+      </a>
+    </div>
+{% endfor %}
+
+{% endblock %}
